@@ -1,0 +1,32 @@
+{
+  "name": "node-github",
+  "version": "0.0.1",
+  "description": "NodeJS backend server for use with GitHub API",
+  "engines": {
+    "node": "11.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start:local": "NODE_ENV=local node index.js"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "github",
+    "oauth"
+  ],
+  "author": "faster-than-light",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/faster-than-light/node-github.git"
+  },
+  "dependencies": {
+    "@octokit/auth": "^1.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  }
+}
