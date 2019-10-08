@@ -25,6 +25,7 @@ app.get('/', async (req, res) => {
       clientId,
       clientSecret,
       code,
+      scopes: ['user'],
     })
     
     const tokenAuthentication = await auth({ type: "token" })
