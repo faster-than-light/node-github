@@ -1,6 +1,6 @@
 {
   "name": "node-github",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NodeJS backend server for use with GitHub API",
   "engines": {
     "node": "11.x"
