@@ -29,8 +29,9 @@ app.get('/', async (req, res) => {
     })
     
     const tokenAuthentication = await auth({ type: "token" })
+      .catch(c => null)
     
-    res.send(tokenAuthentication.token)
+    res.send(tokenAuthentication ? tokenAuthentication.token : '')
   }
   catch (c) {
     console.error(c)
