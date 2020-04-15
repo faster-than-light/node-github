@@ -16,7 +16,7 @@ app.use(cors())
 app.get('/', async (req, res) => {
   try {
     const { query } = req
-    const { code, env } = query
+    const { code, env, scopes } = query
     const { clientIds } = config.github
     const clientId = clientIds[env]
     const clientSecret = process.env[`${env.toUpperCase()}_GITHUB_CLIENT_SECRET`]
@@ -25,13 +25,13 @@ app.get('/', async (req, res) => {
       clientId,
       clientSecret,
       code,
-      scopes: ['repo', 'user'],
+      scopes,
     })
     
     const tokenAuthentication = await auth({ type: "token" })
       .catch(c => null)
     
-    res.send(tokenAuthentication ? tokenAuthentication.token : '')
+    res.send(tokenAuthentication || '')
   }
   catch (c) {
     console.error(c)
