@@ -1,6 +1,6 @@
 {
   "name": "node-github-oauth",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "NodeJS backend server for use with GitHub API",
   "engines": {
     "node": "11.x"
@@ -24,9 +24,9 @@
     "url": "https://github.com/faster-than-light/node-github-oauth.git"
   },
   "dependencies": {
-    "@octokit/auth": "^1.1.0",
-    "cors": "^2.8.5",
-    "dotenv": "^8.1.0",
-    "express": "^4.17.1"
+    "@octokit/auth": "1.1.1",
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1"
   }
 }
